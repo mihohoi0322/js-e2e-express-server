@@ -12,10 +12,10 @@ variables:
   azureSubscription: '0c88c768-68ac-49d9-bb9b-b123a5bb2748'
 
   # Web app name
-  webAppName: 'self-hosted-open'
+  webAppName: 'selfhosted-webapps'
 
   # Environment name
-  environmentName: 'self-hosted-open'
+  environmentName: 'selfhosted-webapps'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -74,6 +74,6 @@ stages:
               appType: webAppLinux
               appName: $(webAppName)
               #appName: self-hosted-open.privatelink.azurewebsites.net
-              runtimeStack: 'NODE|10.10'
+              runtimeStack: 'NODE|14'
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
               startUpCommand: 'npm run start'

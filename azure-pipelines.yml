@@ -72,8 +72,8 @@ stages:
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
-              appName: $(webAppName)
-              #appName: self-hosted-open.privatelink.azurewebsites.net
+              #appName: $(webAppName)
+              appName: selfhosted-webapps.privatelink.azurewebsites.net
               runtimeStack: 'NODE|14'
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
               startUpCommand: 'npm run start'
